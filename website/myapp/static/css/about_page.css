@@ -1,0 +1,48 @@
+body {
+    background-color: #142c3f; /* Change this color to your desired background color */
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    font-family: 'Fjalla One', sans-serif;
+    background: linear-gradient(to bottom, #255074, #0e0e0e); /* Adjust the colors as desired */
+}
+.main_div{
+
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 3%;
+    /* color: #f8d75f; */
+
+    width : 75%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+
+/* Style the project description section */
+#project-description {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 1%;
+    text-align: center;
+}
+
+/* Style the text within the project description */
+#project-description h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f8d75f;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#paragraph_desc {
+    font-size: 24px;
+    line-height: 1.7;
+    color: #ab9090;
+    font-weight: 400;
+    font-size: 1.5em;
+
+}
+
+/* -0 */

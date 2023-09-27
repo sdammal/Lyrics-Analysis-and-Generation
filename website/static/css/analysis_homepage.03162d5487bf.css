@@ -1,0 +1,102 @@
+body {
+    background-color: #142c3f; /* Change this color to your desired background color */
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    font-family: 'Fjalla One', sans-serif;
+}
+.main_div{
+    background-color: #142c3f; /* Change this color to your desired background color */
+    justify-content: center;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap; 
+    margin-top: 3%;
+}
+
+
+.card {
+    margin-left: 3%;
+    margin-top: 5%;
+
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  
+  .card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.4;
+    max-height: 100%;
+  }
+  
+
+
+/* Style for the circle container */
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%; /* Adjust the height as needed */
+    
+}
+
+/* Style for the circular container with a red border */
+.circle {
+    width: 150px; /* Adjust the size of the circle container */
+    height: 150px; /* Adjust the size of the circle container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+
+/* Style for the circle image */
+.circle-image {
+    width: 100%; /* Ensure the image doesn't exceed the container size */
+    height: 100%; /* Ensure the image doesn't exceed the container size */
+    /* animation: rotate 2s linear infinite;  */
+
+}

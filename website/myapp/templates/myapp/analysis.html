@@ -1,0 +1,536 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/analysis.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    </head>
+
+
+    <body>
+        {% include './header.html' %}
+        <br><br><br>
+        <div class="body-div">
+            
+            <div class="tile tile1">
+                <div class="tile-header tileHeader1">
+                    <h2> {{artist_name}} <h2>
+                </div>
+
+                <div class="circle-container">
+                    <div class="circle">
+                        <img src={{artist_image_path}} alt="Image" class="circle-image">
+                    </div>
+                </div>
+
+                <div class="centered-text">
+                    <span class="into-text">
+                        {{artist_intro}}
+                    </span>
+                    {% comment %} 
+                    <span class="longest-word-text">Longest word used : </span>
+                    
+                    <div class="longest_word_block"> 
+                        <span>longest-word-used</span>
+                    </div> {% endcomment %}
+
+                    <div class="main_social">
+                        <div class="up_social">
+
+                            <a href={{artist_instagram_link}} target="_blank"> 
+                                <button class="card1_social">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero" class="instagram_social">
+                                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                            <g transform="scale(8,8)">
+                                                <path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </a>
+
+                            <a href={{artist_twitter_link}} target="_blank"> 
+                                <button class="card2_social">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="twitter_social">
+                                        <path d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path>
+                                    </svg>
+                                </button>
+                            </a>
+
+                        </div>
+                        
+                        <div class="down_social">
+                            
+                            <a href={{artist_spotify_link}} target="_blank"> 
+                                <button class="card3_social">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="30px" height="30px" class="spotify_social">    
+                                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"></path>
+                                    </svg>
+                                </button>
+                            </a>
+
+                            <a href={{artist_youtube_link}} target="_blank"> 
+
+                                <button class="card4_social">
+                                    <svg height="30px" width="30px" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" class="youtube_social">
+                                        <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                                    </svg>
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="tile tile2">
+                <div class="tile-header tileHeader2">
+                    <h2> Unique Words Percentage <h2>
+                </div>
+                
+                <div style="width: 100%; height: 60%; display: flex; justify-content: center; align-items: center; margin-top: 30%">
+                    <div id="percentageCircle" style="width: 200px; height: 200px;">
+                        <canvas id="percentageChart" style="width: 100%; height: 100%;"></canvas>
+                        <div id="centerText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <span id="percentageText" style="font-size: 38px; color: #f8d75f"></span><br>
+                            <span id="additionalText" style="font-size: 14px; color: #f8d75f; font-family: 'Fjalla One', sans-serif;">avg: XX%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="circle-container-uniquewords" >
+                    <div class="circle-uniquewords">
+                        <img src="{% static 'images/drake.png' %}" alt="Image" class="circle-image-uniquewords">
+                    </div>
+                    <div class="unique_word_per_other_text"> 
+                        <span>7.6%</span>
+                    </div>
+
+                    <div class="circle-uniquewords">
+                        <img src="{% static 'images/eminem.png' %}" alt="Image" class="circle-image-uniquewords">
+                    </div>
+                    <div class="unique_word_per_other_text"> 
+                        <span>12.54%</span>
+                    </div>
+
+                    <div class="circle-uniquewords">
+                        <img src="{% static 'images/justinbieber.png' %}" alt="Image" class="circle-image-uniquewords">
+                    </div>
+                    <div class="unique_word_per_other_text"> 
+                        <span>10.2%</span>
+                    </div>
+
+                    <div class="circle-uniquewords">
+                        <img src="{% static 'images/rihanna.png' %}" alt="Image" class="circle-image-uniquewords">
+                    </div>
+                    <div class="unique_word_per_other_text"> 
+                        <span>8.5%</span>
+                    </div>
+                </div>
+
+            </div>
+        
+            
+
+            <div class="tile tile3">
+                <div class="tile-header tileHeader3">
+                    <h2> General Information about artist<h2>
+                </div>
+                
+                <div style= "margin-top: 15%"> 
+
+                    <span class="general_info_text_heading"> Total Number of songs </span>  
+                    <div class="general_info_text" style="font-size: 30px;"> 
+                        <span>{{ total_songs }}</span>
+                    </div>
+
+                    <span class="general_info_text_heading" >
+                         Total Number of Views 
+                    </span>                        
+                    <div class="general_info_text" style="font-size: 30px;"> 
+                        <span>{{ total_views }}</span>
+                    </div>
+
+                    <span class="general_info_text_heading"> Earliest Song Released </span>  
+                    <div class="general_info_text"> 
+                        <span class="general_info_text_songname">
+                            {{ earliest_song }} ({{earliest_year}})
+                        </span>
+                    </div>
+
+                    <span class="general_info_text_heading"> Latest Song Released </span>  
+                    <div class="general_info_text"> 
+                        <span>{{ latest_song }} ( {{latest_year}} )</span>
+                    </div>
+                </div>
+            </div>    
+        
+        
+
+
+            <div class="tile tile4">
+                <div class="tile-header tileHeader4">
+                    <h2> Views Over the Decades <h2>
+                </div>
+                <!-- Content for Tile 4 -->
+                <div style="width: 90%; height: 90%; display: flex; justify-content: center; align-items: center;">
+                    <canvas id="decade_views" style="width: 100%; height: 100%;"></canvas>
+                </div>
+                
+                <div class="decade_views_text"> 
+                    <span> This tells us about the proportion of the views across the decades   </span>
+                </div>
+            </div>    
+
+            <div class="tile tile5">
+                <div class="tile-header tileHeader5">
+                    <h2> Views Over the Years <h2>
+                </div>
+                <!-- Content for Tile 5 -->
+                <div style="width: 100%; height: 80%; display: flex; justify-content: center; align-items: center; margin-top:15%;">
+                    <canvas id="years_views" style="width: 100%; height: 100%;"></canvas>
+                </div>
+                
+            </div>    
+
+            
+            <div class="tile tile6">
+                <div class="tile-header tileHeader6">
+                    <h2> Most Occurring Curse Words <h2>
+                    </div>
+                    <!-- Content for Tile 5 -->
+                    <div style="width: 100%; height: 85%; display: flex; justify-content: center; align-items: center; margin-top:15%;">
+                        <canvas id="curse_counts" style="width: 100%; height: 100%;"></canvas>
+                    </div>                
+                </div>    
+                
+                <div class="tile tile9">
+                    <div class="tile-header tileHeader9">
+                        <h2> Most viewed Song <h2>
+                    </div>
+                    
+                    <div style="width: 100%; height: 100%;"> 
+                        <a href={{artist_most_viewed_song_link}} target="_blank"> 
+                            <img id="rotating-image" src="{% static 'images/disc_record.png' %}" alt="Rotating Image" title="Open the song in youtube">
+                        </a>
+        
+                        <div class="play_music_text"> 
+                            <span> The most viewed song by {{artist_name}} is "{{artist_most_viewed_song_name}}"   </span>
+                            
+                        </div>
+                    </div>
+
+                </div>    
+                
+            <div class="tile tile7">
+                <div class="tile-header tileHeader7">
+                    <h2> Genre Distribution <h2>
+                    
+                </div>
+                <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; margin-top:0%;">
+                    <canvas id="genreChart" style="width: 100%; height: 100%;"></canvas>
+                </div>
+            </div>    
+
+            <div class="tile tile8">
+                <div class="tile-header tileHeader8">
+                    <h2> Sentiment of the songs over the years <h2>
+                    
+                </div>
+                <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <canvas id="sentiment_chart" style="width: 100%; height: 70%;"></canvas>
+                </div>
+
+                <div class="sentiment_text"> 
+                    <span> The values are the percentage of the songs (not the counts) for that year and of that sentiment. Zero sentiments for an year are not shown   </span>
+                </div>
+            </div>    
+
+
+
+
+        </div>
+        
+        
+
+
+    </body>
+    
+    <script>
+        
+        window.onload = function() {
+            window.scrollTo(0, 0); // Scroll to the top left corner of the page
+        };
+        
+
+        chart_background_colours = [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(255, 159, 64, 0.5)',
+            'rgba(255, 205, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(153, 102, 255, 0.5)',
+            'rgba(255, 0, 0, 0.5)', // Red
+            'rgba(0, 128, 0, 0.5)', // Green
+            'rgba(0, 0, 255, 0.5)', // Blue
+            'rgba(255, 255, 0, 0.5)', // Yellow
+            // Add more colors if needed
+        ];
+        chart_border_colours= [
+            'rgba(255, 99, 132, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 205, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 0, 0, 1)', // Red
+            'rgba(0, 128, 0, 1)', // Green
+            'rgba(0, 0, 255, 1)', // Blue
+            'rgba(255, 255, 0, 1)', // Yellow
+            // Add more colors if needed
+        ];
+
+
+        // FOR TILE 2
+        var ctx_2 = document.getElementById('percentageChart').getContext('2d');
+
+        // Set your specific percentage value here
+        var percentage_2 = {{unique_word_percentage|safe}};
+        
+        var chart_2 = new Chart(ctx_2, {
+            type: 'doughnut',
+            data: {
+                labels: [],
+                datasets: [{
+                    data: [percentage_2, 100 - percentage_2],
+                    backgroundColor: ['#904d66', '#142c3f'],
+                    borderWidth: 0, // Remove the border
+                    cutout: '90%',
+                }],
+            },
+            options: {
+                cutoutPercentage: 260, // Adjust the cutout percentage to control the circle size
+                tooltips: {
+                    enabled: false, // Disable tooltips
+                },
+                legend: {
+                    display: false, // Hide the legend
+                },
+            },
+        });
+    
+        document.getElementById('percentageText').textContent = percentage_2 + '%';
+
+
+
+
+
+        
+        // FOR TILE 4
+        var ctx_4 = document.getElementById('decade_views').getContext('2d');
+        var labels_4 = {{ decade_views_labels|safe }};
+        var data_4 = {{ decade_views_views|safe }};
+
+        var chart_4 = new Chart(ctx_4, {
+            type: 'doughnut',
+            data: {
+                labels: labels_4,
+                datasets: [{
+                    data: data_4,
+                    backgroundColor: chart_background_colours,
+                    borderColor: chart_border_colours,
+                    borderWidth: 0,
+                }],
+            },
+            options: {
+                cutout: '70%', // Adjust the cutout percentage as needed
+            },
+        });
+
+
+        // FOR TILE 5
+
+        var ctx_5 = document.getElementById('years_views').getContext('2d');
+        var year_views_labels = {{ year_views_labels|safe }};
+        var year_views_views = {{ year_views_views|safe }};
+
+        var chart = new Chart(ctx_5, {
+            type: 'bar',
+            data: {
+                labels: year_views_labels,
+                datasets: [{
+                    label: 'View Count',
+                    data: year_views_views,
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)', // Adjust the color as needed
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'View Count'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                }
+            }
+        });
+
+
+
+        // FOR TILE 6
+        var ctx_6 = document.getElementById('curse_counts').getContext('2d');
+        var labels_6 = {{ curse_words_labels|safe }};
+        var data_6 = {{ curse_words_counts|safe }};
+
+        var chart_6 = new Chart(ctx_6, {
+            type: 'doughnut',
+            data: {
+                labels: labels_6,
+                datasets: [{
+                    data: data_6,
+                    backgroundColor: chart_background_colours,
+                    borderColor: chart_border_colours,
+                    borderWidth: 0,
+                }],
+            },
+            options: {
+                cutout: '70%', // Adjust the cutout percentage as needed
+                legend: {
+                    padding: 50, // Adjust the padding value as needed
+                },
+            },
+        });
+        
+
+        // FOR TILE 7
+        var ctx_7 = document.getElementById('genreChart').getContext('2d');
+        var labels_7 = {{ genre_labels|safe }};
+        var data_7 = {{ genre_counts|safe }};
+
+        var chart_7 = new Chart(ctx_7, {
+            type: 'doughnut',
+            data: {
+                labels: labels_7,
+                datasets: [{
+                    data: data_7,
+                    backgroundColor: chart_background_colours,
+                    borderColor: chart_border_colours,
+                    borderWidth: 0,
+                }],
+            },
+            options: {
+                cutout: '0%', // Adjust the cutout percentage as needed
+            },
+        });
+
+        //================================================================================================
+
+
+        var sentimentData = {
+            labels: {{ sentiment_labels|safe }},
+            datasets: [
+                {
+                    label: 'Positive',
+                    data: {{ sentiment_positive|safe }},
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    pointRadius: {{ sentiment_positive|safe }}.map(value => value !== 0 ? 5 : 0),
+                    pointHoverRadius: 18,
+                    tension: 0.4,
+                    fill: false,
+                },
+                {
+                    label: 'Negative',
+                    data: {{ sentiment_negative|safe }},
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1,
+                    pointRadius: {{ sentiment_negative|safe }}.map(value => value !== 0 ? 5 : 0),
+                    pointHoverRadius: 18,
+                    tension: 0.4,
+                    fill: false,
+                },
+                {
+                    label: 'Neutral',
+                    data: {{ sentiment_neutral|safe }},
+                    backgroundColor: 'rgba(255, 205, 86, 0.5)',
+                    borderColor: 'rgba(255, 205, 86, 1)',
+                    borderWidth: 1,
+                    pointRadius: {{ sentiment_neutral|safe }}.map(value => value !== 0 ? 5 : 0),
+                    pointHoverRadius: 18,
+                    tension: 1,
+                    fill: false,
+                }
+            ]
+        };
+
+        
+        
+    
+        var ctx = document.getElementById('sentiment_chart').getContext('2d');
+        
+        var chart = new Chart(ctx, {
+            type: 'scatter',
+            data: sentimentData,
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Percentage of Songs (%)'
+                        },
+                        beginAtZero: true,
+                        suggestedMax: 100,
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'right'
+                    }
+                },
+                responsive: true,
+
+                
+            }
+        });
+
+
+
+
+
+
+
+        //================================================================================================
+
+        window.onload = function() {
+            window.scrollTo(0, 0); // Scroll to the top left corner of the page
+        };
+        
+
+    </script>
+</html>
+

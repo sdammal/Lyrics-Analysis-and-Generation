@@ -1,0 +1,63 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/generate_vocals.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    </head>
+
+    <body>
+        {% include './header.html' %}
+
+        <div class="main_div">
+
+            <div class="container">
+                <h1>Enter lyrics to generate vocals</h1>
+                <h3>For our specific work and resource limitations, we allow only 4 sentences/verses per song. Longer sentences can take a lot of time (5-10min.) so kindly keep it short. </h3>
+                <h3>Average processing time of 4 sentences with around 5 words each is 2 min</h3>
+
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <label for="inputField">First verse:</label>
+                    <input type="text" id="first_name" name="first_sentence" placeholder="In this dark world," required>
+                    
+                    <label for="inputField">Second verse:</label>
+                    <input type="text" id="second_name" name="second_sentence" placeholder="We tend to forget to love," required>
+
+                    <label for="inputField">Third verse:</label>
+                    <input type="text" id="third_name" name="third_sentence" placeholder="But its now," required>
+                    
+                    <label for="inputField">Fourth verse:</label>
+                    <input type="text" id="fourth_name" name="fourth_sentence" placeholder="when its needed the most." required>
+
+                    <button type="submit">Submit</button>
+
+
+                    
+                    <label for="textField" style="margin-top:5%">mp3 file will appear below</label>
+                    {% comment %} show mp3 file here {% endcomment %}
+                    
+                </form>
+                {% if mp3_url %}
+
+                {% comment %} {% static 'myapp/music_files/sample.mp3' %} {% endcomment %}
+                
+
+                <audio controls>
+                    <source src="{{ mp3_url }}" type="audio/mpeg">
+                    {% comment %} <source src="{% static 'myapp/music_files/sample.mp3' %}" type="audio/mpeg"> {% endcomment %}
+                    Your browser does not support the audio element.
+                </audio>
+                {% endif %}
+                
+            </div>
+        </div>
+
+
+    </body>
+
+
+
+</html>

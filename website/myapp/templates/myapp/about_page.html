@@ -1,0 +1,39 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/about_page.css' %}">
+        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script> {% endcomment %}
+
+    </head>
+
+    <body>
+        {% include './header.html' %}
+
+        <div class="main_div">
+
+            <div id="project-description">
+                <h2>Welcome to our Website</h2>
+                <p id="paragraph_desc">    
+                    This project was created by a group of four people: Betül, Elsa, Samvit and Umer (names in alphabetical order), as part of our "Deep Learning in Literary Texts" course. Our objective was to analyze song lyrics from Genius.com, focusing on works by famous artists.
+                    <br><br>
+                    While we showcase analyses of renowned musicians here, you can explore a broader range of analyses in our project report, accessible via the website. Thank you for visiting, and we hope you find our work insightful and engaging.
+                    <br><br>
+                    This website template design was inpired by one of the top posts in r/dataisbeautiful, which can be found <a href="https://www.reddit.com/r/dataisbeautiful/comments/ggdvsg/oc_i_made_a_lyrical_analysis_statistics_database/" target="_blank">here.</a> That template is not open source, so we did not copy the code. We wrote the code for the whole website ourselves.
+
+                </p>
+            </div>
+
+        </div>
+
+        <script>
+
+
+
+        </script>
+
+    </body>
+
+
+
+</html>

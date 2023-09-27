@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="header_nav_bar">
+            <ul>
+                <li><a href="{% url 'landing_page' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'analysis_homepage' %}">Analysis</a></li>
+                <li><a href="{% url 'generate_lyrics' %}">Generate Lyrics</a></li>
+                <li><a href="{% url 'generate_vocals' %}">Generate Vocals</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+</body>
+</html>

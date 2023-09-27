@@ -1,0 +1,44 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/generate_lyrics.css' %}">
+        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script> {% endcomment %}
+
+    </head>
+
+    <body>
+        {% include './header.html' %}
+
+        <div class="main_div">
+
+            <div class="container">
+                <h1>Enter the description of a song to generate lyrics about it</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <label for="inputField">Description:</label>
+                    <input type="text" id="inputField" name="inputField" required>
+                    
+                    <label for="inputField">Artist style:</label>
+                    <input type="text" id="artist_name" name="artist_name" required>
+                    
+                    <button type="submit">Submit</button>
+
+
+                    
+                    <label for="textField" style="margin-top:10%">Model Generate lyrics will appear below:</label>
+                    <div style="white-space: pre-line;">
+                        {{ lyrics|linebreaksbr }}
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+
+    </body>
+
+
+
+</html>

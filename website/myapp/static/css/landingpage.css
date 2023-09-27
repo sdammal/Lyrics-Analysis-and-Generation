@@ -1,0 +1,258 @@
+body {
+    background-color: #142c3f; /* Change this color to your desired background color */
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    font-family: 'Fjalla One', sans-serif;
+}
+.main_div{
+    background-color: #142c3f; /* Change this color to your desired background color */
+    justify-content: center;
+    display: block;
+    margin-top: 10%;
+    margin-left: 45%;
+
+}
+
+.inside_main_div{
+    margin-top: 5%;
+    
+}
+
+.about_btn {
+    padding: 1rem 1rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+
+
+    transition-property: border-top, 
+    border-left, 
+    border-bottom,
+    border-right,
+    box-shadow;
+   }
+   
+.about_btn:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+    cursor: pointer;
+}
+
+
+.analysis_btn {
+    --width: 150px;
+    --timing: 2s;
+    border: 0;
+    width: var(--width);
+    padding-block: 1em;
+    /* color: #fff; */
+    color: blueviolet;
+
+    font-weight: bold;
+    font-size: 1.3em;
+    /* background: rgb(64, 192, 87); */
+    background: rgb(255, 255, 255);
+    transition: all 0.2s;
+    border-radius: 3px;
+    border-radius: 10px;
+    margin-left:4%;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+
+
+  }
+  
+.analysis_btn:hover {
+    background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+    animation: var(--timing) linear dance6123 infinite;
+    transform: scale(1.1) translateY(-1px);
+    cursor: pointer;
+}
+  
+@keyframes dance6123 {
+    to {
+      background-position: var(--width);
+    }
+}
+
+
+
+.generate_btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 250px;
+    height: 50px;
+    border: none;
+    padding: 1rem 1rem;
+    background-color: rgb(255, 255, 255);
+    color: blueviolet;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+    transition-duration: .3s;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding-left: 3.5%;
+
+  }
+  
+  .svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: blueviolet;
+    transition-duration: .3s;
+
+  }
+  
+  .generate_btn:hover {
+    color: transparent;
+  }
+  
+  .generate_btn:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+  }
+  
+  .generate_btn:active {
+    transform: translate(3px , 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(255, 255, 255);
+  }
+
+/* ------------------ */
+
+.report_btn {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  background-size: 400%;
+  color: blueviolet;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+
+.report_btn:hover::before {
+  transform: scaleX(1);
+  color: rgb(255, 255, 255);
+
+}
+
+.report_button_span {
+  position: relative;
+  z-index: 1;
+  
+  color: blueviolet;
+}
+
+.report_btn:hover span {
+  position: relative;
+  z-index: 1;
+  
+  color: rgb(255, 255, 255);
+}
+
+.report_btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+  color: rgb(255, 255, 255);
+
+}
+
+
+
+/*  ------------- */
+
+
+.vocals_btn {
+  --color: blueviolet;
+  font-family: inherit;
+  display: inline-block;
+  line-height: 2.5em;
+  /* margin: 20px; */
+  margin-left:2%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color);
+  background: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.3em;
+  border-radius: 25px;
+  padding:10px
+
+
+ }
+ 
+.vocals_btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ 
+.vocals_btn:hover {
+  color: #fff;
+  cursor: pointer;
+
+ }
+ 
+.vocals_btn:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+.vocals_btn:hover:before {
+  top: -30px;
+  left: -8px;
+}
+ 
+.vocals_btn:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+ }

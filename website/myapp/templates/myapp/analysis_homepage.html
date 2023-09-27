@@ -1,0 +1,72 @@
+{% comment %} 
+To add new artists:
+    1) add their file in the static folder
+    2) add a new card div in the body. (link should be the same as the one in the if condition in views.py analysis function)
+    3) add their details in the artists_info.csv
+    4) add their if condition in views.py analysis function (casing of the string should match the casing in 2 step)
+    5) Confirm their image is in the static folder. and has the same name as 2 and 4 point
+
+{% endcomment %}
+
+{% load static %}
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/analysis_homepage.css' %}">
+        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script> {% endcomment %}
+
+    </head>
+
+    <body>
+        {% include './header.html' %}
+        <div class="main_div">
+
+            <div class="card">
+                <a href="{% url 'analysis' artist_name='Taylor Swift' %}" > 
+                    <div class="circle-container">
+                        <div class="circle">
+                            <img src="{% static 'images/taylorswift.png' %}" alt="Image" class="circle-image">
+                        </div>
+                    </div>
+
+                    <div class="card__content">
+                        <p class="card__title">
+                            Taylor Swift 
+                        </p>
+                        <p class="card__description">
+                            Taylor Swift, born on December 13, 1989, gained fame in the mid-2000s. Her most famous album, "1989" (2014), marked a shift to pop. Her most recent album is "Fearless (Taylor's Version)" (2021), and she is currently 33 years old.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card">
+                <a href="{% url 'analysis' artist_name='Eminem' %}" > 
+                    <div class="circle-container">
+                        <div class="circle">
+                            <img src="{% static 'images/eminem.png' %}" alt="Image" class="circle-image">
+                        </div>
+                    </div>
+
+                    <div class="card__content">
+                        <p class="card__title">
+                            Eminem
+                        </p>
+                        <p class="card__description">
+                            Eminem, born Marshall Bruce Mathers III on October 17, 1972, became a rap icon in the late 1990s. His most famous album, "The Marshall Mathers LP" (2000), is a seminal work in hip-hop. His most recent album, "Music to Be Murdered By" (2020), continues to showcase his enduring influence as a rap legend at the age of 50.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            
+            
+
+        </div>
+
+          
+
+    </body>
+
+
+
+</html>

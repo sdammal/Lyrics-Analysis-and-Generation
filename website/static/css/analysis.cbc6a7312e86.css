@@ -1,0 +1,496 @@
+body {
+    background-color: #142c3f; /* Change this color to your desired background color */
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+.tile {
+    width: 25%;
+    height: 80%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    margin: 0 0 10px 30px;
+    margin-left: 5%;
+}
+
+/* Style for the headers within the tiles */
+.tile-header {
+    height: 15%;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.tileHeader1{
+    background-color: #45456d;
+    color: #f8d75f;
+
+}
+.tile1{
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+.tileHeader2{
+    background-color: #7a4960;
+    color: #f8d75f;
+
+}
+.tile2{
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+.tileHeader3{
+    background-color: #4e706f;
+    color: #f8d75f;
+
+}
+.tile3{
+    border: 1px solid #213749;
+    background-color: #213749;
+}
+
+
+.tileHeader4{
+    background-color: #704e52;
+    color: #f8d75f;
+
+}
+.tile4{
+    margin-top: 5%;
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+.tileHeader5{
+    background-color: #7a4960;
+    color: #f8d75f;
+
+}
+.tile5{
+    width: 53%;
+    margin-top: 5%;
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+.tileHeader6{
+    background-color: #704e52;
+    color: #f8d75f;
+
+}
+.tile6{
+    margin-top: 5%;
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+
+.tileHeader7{
+    background-color: #286723;
+    color: #f8d75f;
+
+}
+.tile7{
+    margin-top: 5%;
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+.tileHeader8{
+    background-color: #7a4960;
+    color: #f8d75f;
+
+}
+.tile8{
+    width: 80.5%;
+    margin-top: 5%;
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+.tileHeader9{
+    background-color: #45456d;
+    color: #f8d75f;
+
+}
+.tile9{
+    margin-top: 5%;
+    border: 1px solid #213749;
+    background-color: #213749;
+
+}
+
+
+
+
+/* Style for the circle container */
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%; /* Adjust the height as needed */
+    
+}
+
+/* Style for the circular container with a red border */
+.circle {
+    width: 150px; /* Adjust the size of the circle container */
+    height: 150px; /* Adjust the size of the circle container */
+    border-radius: 50%; /* Creates a circle container */
+    border: 4px solid #775ba3; /* Specific border color (red in this example) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+
+/* Style for the circle image */
+.circle-image {
+    width: 100%; /* Ensure the image doesn't exceed the container size */
+    height: 100%; /* Ensure the image doesn't exceed the container size */
+    border-radius: 50%; /* Creates a circle within the circle container */
+    /* animation: rotate 2s linear infinite;  */
+
+}
+
+/* Style for the centered text below the circle */
+.centered-text {
+    text-align: center;
+    margin-top: 5px; /* Adjust the spacing as needed */
+    color: #f8d75f;
+    
+}
+
+.into-text{
+    display: block;
+    text-align: center;
+    color: #6e7c88;
+    font-size: 20px;
+    margin-top: -25%;
+    margin-bottom: 15%;
+}
+
+.longest-word-text{
+    margin-top: 50%;
+}
+
+/* create a div which is a small block and its content is capital.*/
+.longest_word_block{
+    display: block; /* Makes the div inline, so it wraps around the text */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #4e706f; /* Background color */
+    color: #f8d75f; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold; /* Bold text */
+    margin-top: 3%;
+}
+
+
+
+
+
+/*  ---------  */
+
+/* Style for the image container */
+.circle-container-uniquewords {
+    /* Add any desired styling for the image container here */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:-40px; /* Adjust the margin as needed */
+    margin-right:10px; 
+}
+
+/* Style for each individual image and text container */
+.circle-uniquewords {
+    /* Add any desired styling for each image container here */
+    flex: 1; /* This will make them take equal horizontal space */
+    /* text-align: center; */
+    margin-left: 10%;
+}
+
+.circle-image-uniquewords {
+    /* Add any desired styling for the images here */
+    width: 50px; /* Adjust the image width as needed */
+    height: 50px; /* Adjust the image height as needed */
+    border-radius: 50%; /* Make the image circular if desired */
+    margin: 0 auto; /* Center the image horizontally within its container */
+}
+
+.unique_word_per_other_text {
+    /* Add any desired styling for the text containers here */
+    margin-top: 30%;
+    margin-left:-28%;
+    padding:5px;
+    
+    background-color: #7a4960; /* Background color */
+    color: #f8d75f; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold; /* Bold text */
+    font-family: 'Fjalla One', sans-serif;
+
+}
+
+/* create a div which is a small block and its content is capital.*/
+.decade_views_text{
+    display: block; /* Makes the div inline, so it wraps around the text */
+    background-color: #4e706f; /* Background color */
+    color: #f8d75f; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Adjust font size as needed */
+    /* font-weight: bold; Bold text */
+    margin-top: -10%;
+    padding : 15px;
+    
+}
+
+
+/* create a div which is a small block and its content is capital.*/
+.sentiment_text{
+    display: block; /* Makes the div inline, so it wraps around the text */
+    background-color: #4e706f; /* Background color */
+    color: #f8d75f; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Adjust font size as needed */
+    /* font-weight: bold; Bold text */
+    margin-top: -6%;
+    padding : 1%;
+    text-align: center;
+    
+}
+
+
+.general_info_text_heading {
+    display: inline-block; /* Make the heading inline-block to center it */
+    font-size: 20px;
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align the heading */
+    margin-left: 15%; /* Add a small margin to separate it from the value */
+    margin-top: 10%;
+    color: #d56713;
+
+}
+
+.general_info_text {
+    display: block;
+    background-color: #4e706f;
+    color: #f8d75f;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 2%;
+    text-align: center; /* Center-align the text */
+    margin-top: 3%;
+}
+
+.general_info_text_songname {
+    font-size: 20px;
+    /* Center both horizontally and vertically */
+    display: flex;
+
+    /* Set a max-width if needed */
+    max-width: 100%; /* Adjust this value as needed */
+}
+
+
+
+
+
+/* ---------------------------------------- */
+
+/* SOCIAL MEDIA ICONS  */
+
+
+.main_social {
+    display: flex block;
+    flex-direction: column;
+    gap: 0.6em;
+    margin-left:27%;
+    margin-top: -5%;
+
+  }
+  
+.up_social {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .down_social {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .card1_social {
+    width: 65px;
+    height: 65px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .instagram_social {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+  }
+  
+  .card2_social {
+    width: 65px;
+    height: 65px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .twitter_social {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+  }
+  
+  .card3_social {
+    width: 65px;
+    height: 65px;
+
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .spotify_social {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+    fill: #03f413;
+
+  }
+  
+  .card4_social {
+    width: 65px;
+    height: 65px;
+
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .youtube_social {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #f51408;
+  }
+  
+  .card1_social:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+  }
+  
+  .card1_social:hover .instagram_social {
+    fill: white;
+  }
+  
+  .card2_social:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03A9F4;
+  }
+  
+  .card2_social:hover .twitter_social {
+    fill: white;
+  }
+  
+  .card3_social:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: rgb(12, 246, 0);
+  }
+  
+  .card3_social:hover .spotify_social {
+    fill: white;
+  }
+  
+  .card4_social:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #e80e0e;
+  }
+  
+  .card4_social:hover .youtube_social {
+    fill: white;
+  }
+
+  /* ------------------------ */
+
+
+  /* Define the rotation animation */
+@keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Start from 0 degrees rotation */
+    }
+    to {
+      transform: rotate(360deg); /* Rotate to 360 degrees (full rotation) */
+    }
+  }
+
+/* Apply the animation to the image */
+#rotating-image {
+    animation: rotate 8s linear infinite; /* Rotate continuously for 5 seconds */
+    margin-top: 40%;
+    margin-left: 10%;
+    width: 250px; /* Adjust the size of the circle container */
+    height: 250px; /* Adjust the size of the circle container */
+    border-radius: 50%; /* Creates a circle container */
+
+}
+#rotating-image:hover {
+    animation: rotate 2s linear infinite; /* Rotate continuously for 5 seconds */
+}
+
+/* create a div which is a small block and its content is capital.*/
+.play_music_text{
+    display: block; /* Makes the div inline, so it wraps around the text */
+    background-color: #4e706f; /* Background color */
+    color: #f8d75f; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Adjust font size as needed */
+    /* font-weight: bold; Bold text */
+    margin-top: 10%;
+    padding : 15px;
+    text-align: center;
+    
+}

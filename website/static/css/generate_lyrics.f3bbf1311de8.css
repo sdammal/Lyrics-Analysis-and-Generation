@@ -1,0 +1,63 @@
+body {
+    background-color: #142c3f; /* Change this color to your desired background color */
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    font-family: 'Fjalla One', sans-serif;
+    background: linear-gradient(to bottom, #255074, #0e0e0e); /* Adjust the colors as desired */
+}
+.main_div{
+
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 3%;
+    /* color: #f8d75f; */
+
+    width : 75%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f6c9c9;
+    border-radius: 5px;
+    background-color: #9a5959;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/*  */
+
