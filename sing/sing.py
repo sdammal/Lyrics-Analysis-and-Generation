@@ -40,6 +40,8 @@ def create_drum_sound(frequency, duration_ms, volume=1):
     drum_sound = (drum_sound / np.max(np.abs(drum_sound)) * volume * 32767).astype(np.int16)  # Normalize and convert to 16-bit PCM
     return AudioSegment(drum_sound.tobytes(), frame_rate=sample_rate, sample_width=2, channels=1)
 
+# The next three functions focus on the auto-tune aspect
+# Help was taken from https://thewolfsound.com/how-to-auto-tune-your-voice-with-python/
 
 def corrected_note(f0, scale):
 #     """Return the pitch from the stack of notes we created"""
