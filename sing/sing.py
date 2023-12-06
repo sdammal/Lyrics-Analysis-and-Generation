@@ -252,7 +252,7 @@ def initialize_model(template, input_variables):
 
 def generate_melody_from_prompt(desc_user="A fun melody"):
 
-    os.environ['OPENAI_API_KEY']= "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"
+    os.environ['OPENAI_API_KEY']= ""
 
     description_1 = "A simple melody which follows the chord"
 
